@@ -17,9 +17,8 @@ function Login() {
             if(result.data === "Success"){
                 navigate("/home")
             }else{
-                navigate("/register")
+               // navigate("/register")
                 alert("You are not registered to this service")
-
             }
        
         })

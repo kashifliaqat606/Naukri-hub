@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const mongoURI = "mongodb://127.0.0.1:27017/Naukarihub";
+const mongoURI = "mongodb://127.0.0.1:27017/employee";
 
 mongoose.connect(mongoURI)
 .then(() => {
