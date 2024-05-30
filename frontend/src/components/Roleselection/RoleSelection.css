@@ -1,0 +1,23 @@
+.form-check-input[type="radio"] {
+    display: none;
+}
+
+.form-check-label {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    text-align: left;
+}
+
+.form-check-input[type="radio"]:checked + .form-check-label {
+    border-color: #28a745;
+    background-color: #e9f7ef;
+    color: #28a745;
+}
+
+.form-check-label .me-2 {
+    margin-right: 10px;
+}
