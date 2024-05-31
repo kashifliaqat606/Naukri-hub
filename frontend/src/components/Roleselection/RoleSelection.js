@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './RoleSelection.css';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserTie, faBriefcase } from '@fortawesome/free-solid-svg-icons'; // Import required icons
+import { faUserTie, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 function RoleSelection() {
     const [role, setRole] = useState('');

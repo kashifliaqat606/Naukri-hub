@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +9,23 @@ function Signup() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [role, setRole] = useState('');
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const role = params.get('role');
+        if (role) {
+            setRole(role);
+        } else {
+          
+            navigate('/roleselection'); // Redirect to role selection if no role is provided
+        }
+    }, [location, navigate]);
 
     const validateForm = () => {
         let valid = true;
@@ -52,7 +65,7 @@ function Signup() {
         if (!validateForm()) {
             return;
         }
-        axios.post("http://localhost:3001/register", { name, email, password })
+        axios.post("http://localhost:3001/register", { name, email, password, role })
             .then(result => {
                 console.log(result);
                 navigate("/login");
