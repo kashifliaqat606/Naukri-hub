@@ -26,7 +26,7 @@ function App() {
         <Route path="/freelancer-dashboard" element={<JobSeekerDashboard />} />
         
       </Routes>
- 
+   
     </BrowserRouter>
   )
 }

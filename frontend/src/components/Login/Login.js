@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import './Login.css'; // Ensure this CSS file is included for any custom styling
 
 function Login() {
@@ -113,6 +114,12 @@ function Login() {
                         Login
                     </button>
                 </form>
+                <div className="mt-3">
+                    <button className="btn btn-primary w-100 rounded-0 d-flex align-items-center justify-content-center">
+                        <FontAwesomeIcon icon={faGoogle} className="me-2" />
+                        Sign in with Google
+                    </button>
+                </div>
                 <p className="mt-3">Don't have an account?</p>
                 <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
                     Sign Up

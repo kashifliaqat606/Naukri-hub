@@ -14,11 +14,13 @@ body {
 .container {
   max-width: 1170px;
   margin: auto;
+  padding: 0 15px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 ul {
@@ -26,21 +28,17 @@ ul {
 }
 
 .footer {
-    background-color: #24262b;
-    padding: 70px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* Additional styling for better appearance */
-  .footer-col {
-    width: 25%;
-    padding: 0 15px;
-  }
-  
-  /* Add other styles as needed */
-  
+  background-color: #24262b;
+  padding: 70px 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer-col {
+  flex: 1 1 25%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
 
 .footer-col h4 {
   font-size: 18px;
@@ -102,13 +100,14 @@ ul {
 /* responsive */
 @media (max-width: 767px) {
   .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
+    flex: 1 1 50%;
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 574px) {
   .footer-col {
-    width: 100%;
+    flex: 1 1 100%;
+    padding: 0 5px;
   }
 }

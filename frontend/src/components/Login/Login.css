@@ -68,3 +68,56 @@ body {
         max-width: 400px;
     }
 }
+/* Login.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.bg-secondary {
+    background-color: #f8f9fa;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #4285F4;
+    border-color: #4285F4;
+}
+
+.btn-primary:hover {
+    background-color: #357ae8;
+    border-color: #357ae8;
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+.input-group-text {
+    background-color: #e9ecef;
+}
+
+.text-danger {
+    color: #dc3545;
+}
