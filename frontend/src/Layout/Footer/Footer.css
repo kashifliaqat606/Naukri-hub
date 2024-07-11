@@ -105,7 +105,7 @@ ul {
   }
 }
 
-@media (max-width: 574px) {
+@media (max-width: 574px) { 
   .footer-col {
     flex: 1 1 100%;
     padding: 0 5px;

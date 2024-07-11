@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react';
+import JobPostingForm from './JobPostingForm';
 
-function Clientdashboard(){
-    return(
-        <center>
-            <h1>
-                This is Client dashboard
-            </h1>
-        </center>
-    )
-}
+const EmployerDashboard = () => {
+  return (
+    <div className="employer-dashboard">
+      <h1>Employer Dashboard</h1>
+      <JobPostingForm />
+      {/* Add other components like job listings and application management here */}
+    </div>
+  );
+};
 
-export default Clientdashboard ;
+export default EmployerDashboard;
